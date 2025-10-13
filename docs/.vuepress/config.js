@@ -16,7 +16,7 @@ export default defineUserConfig({
   },
   theme: plumeTheme({
     hostname: 'http://docs.ncatbot.xyz',
-    docsRepo: 'https://github.com/Isaaczhr/NcatBotDocs',
+    docsRepo: 'https://github.com/huan-yp/NcatBotDocs',
     docsBranch: 'master',
     docsDir: 'docs',
     plugins: {
@@ -26,13 +26,18 @@ export default defineUserConfig({
       markdownEnhance:{
         mermaid: true, // ✅ 启用 Mermaid 支持
       },
+      // 1. 评论配置放这里
       comment: {
-        provider: 'Giscus', // "Artalk“ | "Giscus" | "Twikoo" | "Waline"
-        comment: true,
-        repo: 'Isaaczhr/NcatBotDocs',
-        repoId: 'R_kgDONolemw',
-        category: 'General',
-        categoryId: 'DIC_kwDONolem84CmvqM',
+        provider: 'Giscus',
+        repo: 'huan-yp/NcatBotDocs',
+        repoId: 'R_kgDOP5C1xA',
+        category: 'Announcements',
+        categoryId: 'DIC_kwDOP5C1xM4CwTIS',
+        mapping: 'title',
+        reactionsEnabled: true,
+        inputPosition: 'bottom',
+        theme: 'preferred_color_scheme',
+        lang: 'zh-CN',
       },
       markdownPower: {
         imageSize: 'all', // 'local' | 'all'
